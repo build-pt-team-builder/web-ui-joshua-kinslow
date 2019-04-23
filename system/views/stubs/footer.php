@@ -1,7 +1,7 @@
     <div class="row">
         <div class="col-sm-12">
             <address>
-                &copy; 2019 Joshua F. Kinslow
+                &copy; 2019 Team Builder
             </address>
         </div>
     </div>
