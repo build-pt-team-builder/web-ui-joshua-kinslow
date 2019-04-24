@@ -1,0 +1,60 @@
+div.card-container {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	div.card {
+		// width: 20rem;\
+		background: transparent;
+		border: 1px solid @lightRed;
+		border-radius: 10px;
+
+		div.card-body {
+			p.card-title {
+				font-size: 2rem;
+			}
+
+			ul.list-group {
+				background: lighten(@lightGrey, 20%);
+				color: @red;
+
+				li.list-group-item {
+					background: lighten(@lightGrey, 20%);
+					border-top: 1px solid @lightGrey;
+					border-bottom: 1px solid @lightGrey;
+				}
+			}
+
+			a.btn.btn-primary {
+				background: @blue;
+				border: 0 solid transparent;
+				font-size: 1.2rem;
+				width: 100%;
+			}
+		}
+	}
+}
+
+div#carousel {
+	display: flex;
+	justify-content: center;
+	img {
+		border: 1px solid black;
+	}
+}
+
+#content {
+	margin: 20px 0;
+
+	header.Page-Header {
+		div.page-header-div {
+			font-size: 2.8rem;
+			// font-weight: bold;
+			font-family: 'Berkshire Swash', cursive;
+			margin: 20px 0 0 0;
+			padding: 0 0 20px 0;
+			border-bottom: 1px solid;
+		}
+	}
+}
