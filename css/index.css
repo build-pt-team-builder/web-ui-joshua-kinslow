@@ -13,10 +13,11 @@ html {
 body {
   font-size: 1.6rem;
 }
-header {
+nav {
+  background: white;
   border-bottom: 1px solid black;
 }
-header div h2 {
+nav div.brand {
   font-family: 'Berkshire Swash', cursive;
   font-size: 3.2rem;
   margin-top: 2px;
@@ -45,4 +46,12 @@ div.card-container div.card div.card-body a.btn.btn-primary {
   background: black;
   border: 0 solid transparent;
   width: 100%;
+}
+div#carousel {
+  display: flex;
+  justify-content: center;
+}
+address.footer {
+  font-size: 1.2rem;
+  border-top: 1px solid black;
 }
