@@ -18,6 +18,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
+    <script src="./scripts/components/customNav.js"></script>
 
 </head>
 
@@ -26,7 +27,7 @@
         <nav class="navbar sticky-top">
             <div class="brand">Team Builder</div>
             <div class="nav">
-                <a class="nav-link button" href="index.php?page=index">Home</a>
+                <a class="nav-link button active" href="index.php?page=index">Home</a>
                 <a class="nav-link button" href="index.php?page=about">About</a>
                 <a class="nav-link button" href="index.php?page=pricing">Pricing</a>
             </div>

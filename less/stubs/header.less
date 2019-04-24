@@ -1,5 +1,5 @@
 nav {
-	background: white;
+	background: lighten(@lightGrey, 20%);
 	border-bottom: 1px solid black;
 	div.brand {
 		font-family: 'Berkshire Swash', cursive;
@@ -10,5 +10,44 @@ nav {
 }
 
 a.nav-link.button {
-	.Button(10px 20px, 0, black, white, white, black, 1.6rem);
+	.Button(10px 20px, 0, @lightNavy, lighten(@lightGrey, 20%), lighten(@lightGrey, 20%), @red, 1.6rem);
+}
+
+@media (max-width: 508px) {
+	nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&.collapse {
+			animation: collapse 0.5s forwards;
+		}
+
+		&.open {
+			animation: open 0.5s forwards;
+		}
+
+		div.nav {
+			display: flex;
+			justify-content: center;
+		}
+
+		@keyframes collapse {
+			from {
+				top: 0;
+			}
+			to {
+				top: -$navBar-height;
+			}
+		}
+
+		@keyframes open {
+			from {
+				top: -$navBar-height;
+			}
+			to {
+				top: 0;
+			}
+		}
+	}
 }

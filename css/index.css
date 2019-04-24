@@ -12,9 +12,11 @@ html {
 }
 body {
   font-size: 1.6rem;
+  background: #c0c2ce;
+  color: #5e0a1a;
 }
 nav {
-  background: white;
+  background: #c0c2ce;
   border-bottom: 1px solid black;
 }
 nav div.brand {
@@ -26,30 +28,69 @@ nav div.brand {
 a.nav-link.button {
   padding: 10px 20px;
   margin: 0;
-  color: black;
-  background: white;
+  color: #003dd6;
+  background: #c0c2ce;
 }
 a.nav-link.button:hover {
-  color: white;
-  background: black;
+  color: #c0c2ce;
+  background: #bb1333;
+}
+@media (max-width: 508px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav div.nav {
+    display: flex;
+    justify-content: center;
+  }
 }
 div.card-container {
   display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 div.card-container div.card {
-  width: 20rem;
+  background: transparent;
+  border: 1px solid #ec4867;
+  border-radius: 10px;
 }
 div.card-container div.card div.card-body p.card-title {
   font-size: 2rem;
 }
+div.card-container div.card div.card-body ul.list-group {
+  background: #c0c2ce;
+  color: #bb1333;
+}
+div.card-container div.card div.card-body ul.list-group li.list-group-item {
+  background: #c0c2ce;
+  border-top: 1px solid #878ba1;
+  border-bottom: 1px solid #878ba1;
+}
 div.card-container div.card div.card-body a.btn.btn-primary {
-  background: black;
+  background: #1e50ee;
   border: 0 solid transparent;
+  font-size: 1.2rem;
   width: 100%;
 }
 div#carousel {
   display: flex;
   justify-content: center;
+}
+div#carousel img {
+  border: 1px solid black;
+}
+#content {
+  margin: 20px 0;
+}
+#content header.Page-Header div.page-header-div {
+  font-size: 2.8rem;
+  font-family: 'Berkshire Swash', cursive;
+  margin: 20px 0 0 0;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid;
 }
 address.footer {
   font-size: 1.2rem;

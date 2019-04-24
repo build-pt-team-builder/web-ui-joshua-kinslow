@@ -28,6 +28,9 @@ require_once('./system/views/stubs/header.php');
 </div>
 <div id="content" class="row">
     <div class="col-sm-12">
+        <header class="Page-Header">
+            <div class="page-header-div">Home</div>
+        </header>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Eu scelerisque felis imperdiet proin fermentum leo vel. Id donec ultrices tincidunt arcu non
             sodales neque sodales. Tristique magna sit amet purus. Ornare quam viverra orci sagittis. Posuere urna nec
