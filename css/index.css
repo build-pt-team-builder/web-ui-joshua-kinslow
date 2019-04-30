@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Berkshire Swash';
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Berkshire Swash Regular'), local('BerkshireSwash-Regular'), url(https://fonts.gstatic.com/s/berkshireswash/v7/ptRRTi-cavZOGqCvnNJDl5m5XmN_qs42.ttf) format('truetype');
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
 }
 * {
   box-sizing: border-box;
@@ -12,38 +12,79 @@ html {
 }
 body {
   font-size: 1.6rem;
-  background: #c0c2ce;
-  color: #5e0a1a;
+  background: #222;
+  color: #fff;
 }
-nav {
-  background: #c0c2ce;
-  border-bottom: 1px solid black;
+nav.navbar {
+  display: flex;
+  background: #222;
+  padding: 0 !important;
+  border-bottom: 2px solid #ccc;
+  justify-content: normal;
 }
-nav div.brand {
-  font-family: 'Berkshire Swash', cursive;
+nav.navbar div.brand {
+  display: flex;
+  justify-content: normal;
+  font-family: 'Lato', cursive;
+  padding: 1px;
   font-size: 3.2rem;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  color: #fff;
+  margin-right: auto;
+  margin-left: 10px;
+  border-bottom: 2px solid #ccc;
+  transform: translateY(2px);
+}
+nav.navbar div.brand span {
+  color: #bb1333;
+}
+.btnactive {
+  color: white;
+  border-color: white;
 }
 a.nav-link.button {
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 0;
-  color: #003dd6;
-  background: #c0c2ce;
+  color: #ccc;
+  background: #222;
+  transform: translateY(2px);
+  border-bottom: 2px solid #ccc;
+  font-size: 2rem;
 }
 a.nav-link.button:hover {
-  color: #c0c2ce;
-  background: #bb1333;
+  color: white;
+  border-color: white;
 }
-@media (max-width: 508px) {
+@media (max-width: 768px) {
   nav {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  nav.collapse {
+    animation: collapse 0.5s forwards;
+  }
+  nav.open {
+    animation: open 0.5s forwards;
+  }
   nav div.nav {
     display: flex;
     justify-content: center;
+  }
+  @keyframes collapse {
+    from {
+      top: 0;
+    }
+    to {
+      top: -63px;
+    }
+  }
+  @keyframes open {
+    from {
+      top: -63px;
+    }
+    to {
+      top: 0;
+    }
   }
 }
 div.card-container {
@@ -54,28 +95,30 @@ div.card-container {
 }
 div.card-container div.card {
   background: transparent;
-  border: 1px solid #ec4867;
+  border: 1px solid #000;
   border-radius: 10px;
 }
 div.card-container div.card div.card-body p.card-title {
   font-size: 2rem;
 }
 div.card-container div.card div.card-body ul.list-group {
-  background: #c0c2ce;
-  color: #bb1333;
+  background: #222;
+  color: #fff;
 }
 div.card-container div.card div.card-body ul.list-group li.list-group-item {
-  background: #c0c2ce;
-  border-top: 1px solid #878ba1;
-  border-bottom: 1px solid #878ba1;
+  background: #222;
+  color: #fff;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 div.card-container div.card div.card-body a.btn.btn-primary {
-  background: #1e50ee;
+  background: #08addd;
   border: 0 solid transparent;
   font-size: 1.2rem;
   width: 100%;
 }
 div#carousel {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -87,10 +130,31 @@ div#carousel img {
 }
 #content header.Page-Header div.page-header-div {
   font-size: 2.8rem;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Lato', cursive;
   margin: 20px 0 0 0;
   padding: 0 0 20px 0;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #ccc;
+}
+#tooSmallError {
+  display: none;
+}
+#phpErrors .phpErrorsOpen {
+  display: block;
+}
+#phpErrors .phpErrorsClosed {
+  display: none;
+}
+@media (max-width: 315px) {
+  .container-fluid {
+    display: none;
+  }
+  #tooSmallError {
+    display: block;
+    font-size: 1.6rem;
+  }
+  #tooSmallError h1 {
+    font-size: 2.4rem;
+  }
 }
 address.footer {
   font-size: 1.2rem;

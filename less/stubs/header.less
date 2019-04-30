@@ -1,19 +1,37 @@
-nav {
-	background: lighten(@lightGrey, 20%);
-	border-bottom: 1px solid black;
+nav.navbar {
+	display: flex;
+	background: @txt01;
+	padding: 0 !important;
+	border-bottom: 2px solid @txt04;
+	justify-content: normal;
 	div.brand {
-		font-family: 'Berkshire Swash', cursive;
+		display: flex;
+		justify-content: normal;
+		font-family: 'Lato', cursive;
+		padding: 1px;
 		font-size: 3.2rem;
-		margin-top: 2px;
-		margin-bottom: 2px;
+		color: @txt05;
+		margin-right: auto;
+		margin-left: 10px;
+		border-bottom: 2px solid @txt04;
+		transform: translateY(2px);
+		span {
+			color: @accent0;
+		}
 	}
 }
 
-a.nav-link.button {
-	.Button(10px 20px, 0, @lightNavy, lighten(@lightGrey, 20%), lighten(@lightGrey, 20%), @red, 1.6rem);
+.btnactive {
+	color: white;
+	border-color: white;
 }
 
-@media (max-width: 508px) {
+a.nav-link.button {
+	.Button(10px 10px, 0, @txt04, @txt01, white, white, 2rem);
+}
+
+@media (max-width: 768px) {
+	@navBar-height: 63px;
 	nav {
 		display: flex;
 		flex-direction: column;
@@ -37,13 +55,13 @@ a.nav-link.button {
 				top: 0;
 			}
 			to {
-				top: -$navBar-height;
+				top: -@navBar-height;
 			}
 		}
 
 		@keyframes open {
 			from {
-				top: -$navBar-height;
+				top: -@navBar-height;
 			}
 			to {
 				top: 0;
