@@ -43,6 +43,9 @@ require_once('./system/views/stubs/header.inc.php');
             <li>Ability to view a hig level list of projects and roles</li>
             <li>Ability to access and view specific project details</li>
         </ul>
+        <div class="get-started">
+            <a href="#" class="get-started-btn">Get Started</a>
+        </div>
         </p>
     </div>
 </div>

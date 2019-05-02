@@ -21,22 +21,43 @@ nav.navbar {
 	}
 }
 
-.btnactive {
-	color: white;
-	border-color: white;
-}
-
 a.nav-link.button {
 	.Button(10px 10px, 0, @txt04, @txt01, white, white, 2rem);
+	&.btnactive {
+		color: white;
+		border-color: white;
+	}
+}
+
+a.login-btn {
+	.Button(5px 10px, 0, @accent1, @txt01, @txt04, @accent1, 2rem);
+	transform: none;
+	border: 1px solid @accent1;
+	border-radius: 5px;
+	text-decoration: none;
+	&:hover {
+		color: @txt04;
+		border-color: inherit;
+		background: @accent1;
+	}
+}
+
+a.get-started-btn {
+	.Button(5px 10px, 0, @accent1, @txt01, @txt04, @accent1, 2rem);
+	transform: none;
+	border: 1px solid @accent1;
+	border-radius: 5px;
+	text-decoration: none;
+	&:hover {
+		color: @txt04;
+		border-color: inherit;
+		background: @accent1;
+	}
 }
 
 @media (max-width: 768px) {
 	@navBar-height: 63px;
 	nav {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
 		&.collapse {
 			animation: collapse 0.5s forwards;
 		}

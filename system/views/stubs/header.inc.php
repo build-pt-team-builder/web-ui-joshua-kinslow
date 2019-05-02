@@ -29,4 +29,7 @@
                 <a class="nav-link button <?php if($title === "About") { echo "btnactive"; } ?>"
                     href="index.php?page=about">About</a>
             </div>
+            <div class="nav">
+                <a class="login-btn" href="#">Login</a>
+            </div>
         </nav>

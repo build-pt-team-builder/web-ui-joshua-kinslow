@@ -37,10 +37,6 @@ nav.navbar div.brand {
 nav.navbar div.brand span {
   color: #bb1333;
 }
-.btnactive {
-  color: white;
-  border-color: white;
-}
 a.nav-link.button {
   padding: 10px 10px;
   margin: 0;
@@ -54,12 +50,55 @@ a.nav-link.button:hover {
   color: white;
   border-color: white;
 }
+a.nav-link.button.btnactive {
+  color: white;
+  border-color: white;
+}
+a.login-btn {
+  padding: 5px 10px;
+  margin: 0;
+  color: #08addd;
+  background: #222;
+  transform: translateY(2px);
+  border-bottom: 2px solid #08addd;
+  font-size: 2rem;
+  transform: none;
+  border: 1px solid #08addd;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a.login-btn:hover {
+  color: #ccc;
+  border-color: #08addd;
+}
+a.login-btn:hover {
+  color: #ccc;
+  border-color: inherit;
+  background: #08addd;
+}
+a.get-started-btn {
+  padding: 5px 10px;
+  margin: 0;
+  color: #08addd;
+  background: #222;
+  transform: translateY(2px);
+  border-bottom: 2px solid #08addd;
+  font-size: 2rem;
+  transform: none;
+  border: 1px solid #08addd;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a.get-started-btn:hover {
+  color: #ccc;
+  border-color: #08addd;
+}
+a.get-started-btn:hover {
+  color: #ccc;
+  border-color: inherit;
+  background: #08addd;
+}
 @media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   nav.collapse {
     animation: collapse 0.5s forwards;
   }
