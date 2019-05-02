@@ -7,7 +7,7 @@ div.card-container {
 	div.card {
 		// width: 20rem;\
 		background: transparent;
-		border: 1px solid @lightRed;
+		border: 1px solid @txt00;
 		border-radius: 10px;
 
 		div.card-body {
@@ -16,18 +16,19 @@ div.card-container {
 			}
 
 			ul.list-group {
-				background: lighten(@lightGrey, 20%);
-				color: @red;
+				background: @txt01;
+				color: @txt05;
 
 				li.list-group-item {
-					background: lighten(@lightGrey, 20%);
-					border-top: 1px solid @lightGrey;
-					border-bottom: 1px solid @lightGrey;
+					background: @txt01;
+					color: @txt05;
+					border-top: 1px solid white;
+					border-bottom: 1px solid white;
 				}
 			}
 
 			a.btn.btn-primary {
-				background: @blue;
+				background: @accent1;
 				border: 0 solid transparent;
 				font-size: 1.2rem;
 				width: 100%;
@@ -37,6 +38,7 @@ div.card-container {
 }
 
 div#carousel {
+	margin-top: 10px;
 	display: flex;
 	justify-content: center;
 	img {
@@ -51,10 +53,37 @@ div#carousel {
 		div.page-header-div {
 			font-size: 2.8rem;
 			// font-weight: bold;
-			font-family: 'Berkshire Swash', cursive;
+			font-family: 'Lato', cursive;
 			margin: 20px 0 0 0;
 			padding: 0 0 20px 0;
-			border-bottom: 1px solid;
+			border-bottom: 1px solid @txt04;
+		}
+	}
+}
+
+#tooSmallError {
+	display: none;
+}
+
+#phpErrors {
+	.phpErrorsOpen {
+		display: block;
+	}
+	.phpErrorsClosed {
+		display: none;
+	}
+}
+
+@media (max-width: 315px) {
+	.container-fluid {
+		display: none;
+	}
+
+	#tooSmallError {
+		display: block;
+		font-size: 1.6rem;
+		h1 {
+			font-size: 2.4rem;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 $title = "About";
-require_once('./system/views/stubs/header.php');
+require_once('./system/views/stubs/header.inc.php');
 ?>
 <div id="content" class="row">
     <div class="col-sm-12">
@@ -28,7 +28,9 @@ require_once('./system/views/stubs/header.php');
     </div>
 </div>
 <?php
-require_once('./system/views/stubs/footer.php');
+require_once('./system/views/stubs/footer.inc.php');
+require_once('./system/views/stubs/errors.inc.php')
 ?>
 </body>
+
 </html>

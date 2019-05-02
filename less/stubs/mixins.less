@@ -1,10 +1,13 @@
-.Button(@padding, @margin, @color, @bgColor, @hoverColor, @hoverBgColor, @font-size){
-    padding: @padding;
-    margin: @margin;
-    color: @color;
-    background: @bgColor;
-    &:hover {
-        color: @hoverColor;
-        background: @hoverBgColor;
-    }
+.Button(@padding, @margin, @color, @bgColor, @hoverColor, @hoverBgColor, @font-size) {
+	padding: @padding;
+	margin: @margin;
+	color: @color;
+	background: @bgColor;
+	transform: translateY(2px);
+	border-bottom: 2px solid @color;
+	font-size: @font-size;
+	&:hover {
+		color: @hoverColor;
+		border-color: @hoverBgColor;
+	}
 }
