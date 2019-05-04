@@ -20,16 +20,15 @@
     <div class="container-fluid">
         <nav class="navbar sticky-top">
             <div class="brand"><span>T</span>hursday</div>
-            <div class="nav">
-                <a class="nav-link button <?php if($title === "Home") { echo "btnactive"; } ?>"
-                    href="index.php?page=index">Home</a>
+            <div class="nav-container">
+                <div class="nav">
+                    <a class="nav-link button <?php if($title === "Home") { echo "btnactive"; } ?>"
+                        href="index.php?page=index">Home</a>
 
-            </div>
-            <div class="nav">
-                <a class="nav-link button <?php if($title === "About") { echo "btnactive"; } ?>"
-                    href="index.php?page=about">About</a>
-            </div>
-            <div class="nav">
-                <a class="login-btn" href="#">Login</a>
-            </div>
-        </nav>
+                </div>
+                <div class="nav">
+                    <a class="nav-link button <?php if($title === "About") { echo "btnactive"; } ?>"
+                        href="index.php?page=about">About</a>
+                </div>
+                <div class="nav">
+                    <a class="login-btn" href=https://teambuilderapp.netlify.com/>Login </a> </div> </div> </nav>

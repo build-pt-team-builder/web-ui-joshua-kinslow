@@ -19,6 +19,34 @@ nav.navbar {
 			color: @accent0;
 		}
 	}
+	div.nav-container {
+		display: flex;
+		justify-content: normal;
+		align-items: center;
+	}
+}
+
+@media (max-width: 515px) {
+	nav.navbar {
+		flex-direction: column;
+		align-items: center;
+		div.brand {
+			margin-right: 0;
+			margin-left: 0;
+			border-bottom: none;
+		}
+	}
+
+	div.get-started {
+		display: flex;
+		a.get-started-btn {
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
 }
 
 a.nav-link.button {
@@ -64,11 +92,6 @@ a.get-started-btn {
 
 		&.open {
 			animation: open 0.5s forwards;
-		}
-
-		div.nav {
-			display: flex;
-			justify-content: center;
 		}
 
 		@keyframes collapse {

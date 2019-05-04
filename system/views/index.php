@@ -44,7 +44,7 @@ require_once('./system/views/stubs/header.inc.php');
             <li>Ability to access and view specific project details</li>
         </ul>
         <div class="get-started">
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="https://teambuilderapp.netlify.com/signup" class="get-started-btn">Get Started</a>
         </div>
         </p>
     </div>
