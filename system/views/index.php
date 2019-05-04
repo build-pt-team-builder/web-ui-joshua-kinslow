@@ -1,6 +1,6 @@
 <?php
 $title = "Home";
-require_once('./system/views/stubs/header.php');
+require_once('./system/views/stubs/header.inc.php');
 ?>
 <div id="carousel">
     <div class="carousel">
@@ -31,24 +31,28 @@ require_once('./system/views/stubs/header.php');
         <header class="Page-Header">
             <div class="page-header-div">Home</div>
         </header>
-        <hr />
         <p id="product-info">
-            Team builder is built as a build week challenge for Lambda School to solve a real problem which is not having an in house solution for
+            Team builder is built as a build week challenge for Lambda School to solve a real problem which is not
+            having an in house solution for
             setting up and preparing projects for build week.</p>
-            <h3>Features</h3>
-            <ul>
-                <li>Ability to create a project</li>
-                <li>Abiltiy to create roles for projects</li>
-                <li>Ability for users to sign up for roles</li>
-                <li>Ability to view a hig level list of projects and roles</li>
-                <li>Ability to access and view specific project details</li>
-            </ul>
+        <h3>Features</h3>
+        <ul>
+            <li>Ability to create a project</li>
+            <li>Abiltiy to create roles for projects</li>
+            <li>Ability for users to sign up for roles</li>
+            <li>Ability to view a hig level list of projects and roles</li>
+            <li>Ability to access and view specific project details</li>
+        </ul>
+        <div class="get-started">
+            <a href="https://teambuilderapp.netlify.com/signup" class="get-started-btn">Get Started</a>
+        </div>
         </p>
     </div>
 </div>
 
 <?php
-require_once('./system/views/stubs/footer.php');
+require_once('./system/views/stubs/footer.inc.php');
+require_once('./system/views/stubs/errors.inc.php');
 ?>
 <script src="scripts/components/carousel.js"></script>
 </body>

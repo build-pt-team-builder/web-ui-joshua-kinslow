@@ -1,24 +1,91 @@
-nav {
-	background: lighten(@lightGrey, 20%);
-	border-bottom: 1px solid black;
+nav.navbar {
+	display: flex;
+	background: @txt01;
+	padding: 0 !important;
+	border-bottom: 2px solid @txt04;
+	justify-content: normal;
 	div.brand {
-		font-family: 'Berkshire Swash', cursive;
+		display: flex;
+		justify-content: normal;
+		font-family: 'Lato', cursive;
+		padding: 1px;
 		font-size: 3.2rem;
-		margin-top: 2px;
-		margin-bottom: 2px;
+		color: @txt05;
+		margin-right: auto;
+		margin-left: 10px;
+		border-bottom: 2px solid @txt04;
+		transform: translateY(2px);
+		span {
+			color: @accent0;
+		}
+	}
+	div.nav-container {
+		display: flex;
+		justify-content: normal;
+		align-items: center;
+	}
+}
+
+@media (max-width: 515px) {
+	nav.navbar {
+		flex-direction: column;
+		align-items: center;
+		div.brand {
+			margin-right: 0;
+			margin-left: 0;
+			border-bottom: none;
+		}
+	}
+
+	div.get-started {
+		display: flex;
+		a.get-started-btn {
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
 	}
 }
 
 a.nav-link.button {
-	.Button(10px 20px, 0, @lightNavy, lighten(@lightGrey, 20%), lighten(@lightGrey, 20%), @red, 1.6rem);
+	.Button(10px 10px, 0, @txt04, @txt01, white, white, 2rem);
+	&.btnactive {
+		color: white;
+		border-color: white;
+	}
 }
 
-@media (max-width: 508px) {
-	nav {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+a.login-btn {
+	.Button(5px 10px, 0, @accent1, @txt01, @txt04, @accent1, 2rem);
+	transform: none;
+	border: 1px solid @accent1;
+	border-radius: 5px;
+	text-decoration: none;
+	&:hover {
+		color: @txt04;
+		border-color: inherit;
+		background: @accent1;
+	}
+}
 
+a.get-started-btn {
+	.Button(5px 10px, 0, @accent1, @txt01, @txt04, @accent1, 2rem);
+	transform: none;
+	border: 1px solid @accent1;
+	border-radius: 5px;
+	text-decoration: none;
+	&:hover {
+		color: @txt04;
+		border-color: inherit;
+		background: @accent1;
+	}
+}
+
+@media (max-width: 768px) {
+	@navBar-height: 63px;
+	nav {
 		&.collapse {
 			animation: collapse 0.5s forwards;
 		}
@@ -27,23 +94,18 @@ a.nav-link.button {
 			animation: open 0.5s forwards;
 		}
 
-		div.nav {
-			display: flex;
-			justify-content: center;
-		}
-
 		@keyframes collapse {
 			from {
 				top: 0;
 			}
 			to {
-				top: -$navBar-height;
+				top: -@navBar-height;
 			}
 		}
 
 		@keyframes open {
 			from {
-				top: -$navBar-height;
+				top: -@navBar-height;
 			}
 			to {
 				top: 0;
